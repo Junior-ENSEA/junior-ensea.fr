@@ -434,20 +434,6 @@ footer {
 .mobile-menu-toggle .hamburger::before { top: -7px; }
 .mobile-menu-toggle .hamburger::after { top: 7px; }
 
-/* hover/active state: blue background with white bars */
-.mobile-menu-toggle:hover,
-.mobile-menu-toggle:focus {
-    background: #197cc6;
-}
-.mobile-menu-toggle:hover .hamburger,
-.mobile-menu-toggle:focus .hamburger,
-.mobile-menu-toggle:hover .hamburger::before,
-.mobile-menu-toggle:focus .hamburger::before,
-.mobile-menu-toggle:hover .hamburger::after,
-.mobile-menu-toggle:focus .hamburger::after {
-    background: #fff;
-}
-
 .mobile-menu {
     display: none;
     position: fixed;
