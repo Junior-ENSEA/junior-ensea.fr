@@ -1,0 +1,5 @@
+<svg role="img" aria-label="${safeAlt}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="72" height="72" focusable="false">
+                        <title>${safeAlt}</title>
+                        <circle cx="32" cy="32" r="30" fill="#ffffff"/>
+                        <path d="M32 36c6.6 0 12 3.6 12 6v2H20v-2c0-2.4 5.4-6 12-6zm0-16a6 6 0 1 1 0 12 6 6 0 0 1 0-12z" fill="#197cc6"/>
+                    </svg>
