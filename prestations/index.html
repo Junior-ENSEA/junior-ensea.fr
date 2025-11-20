@@ -6,6 +6,21 @@
     <title>Nos prestations - Junior ENSEA</title>
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
+    <style>
+    /* Local styles for prestation expand/collapse (Conception électronique) */
+    .prestation-item { margin-bottom: 8px; }
+    /* Ensure titles and detail text are visible on dark backgrounds */
+    .prestation-toggle, .prestation-title, .prestation-details, .prestation-details p { color: #fff; transition: color 160ms ease; }
+    .prestation-toggle { background: transparent; border: none; font-size: 1rem; text-align: left; width: 100%; padding: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .prestation-toggle:focus { outline: 2px solid #0056b3; }
+    .prestation-details { max-height: 0; overflow: hidden; transition: max-height 320ms ease, padding 320ms ease; padding: 0 12px; }
+    .prestation-item.open .prestation-details { max-height: 240px; padding: 12px; }
+    .prestation-toggle .chev { display: inline-block; transition: transform 320ms ease, color 160ms ease; color: rgba(255,255,255,0.9); }
+    .prestation-item.open .chev { transform: rotate(90deg); }
+    /* Hover: make title, details text and chevron blue */
+    .prestation-toggle:hover, .prestation-item:hover .prestation-title, .prestation-item:hover .prestation-details p { color: #0056b3; }
+    .prestation-toggle:hover .chev, .prestation-item:hover .chev { color: #0056b3; }
+    </style>
     <meta name="description" content="Découvrez nos prestations : Électronique, Robotique & systèmes embarqués, Informatique, Data & IA.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://junior-ensea.fr/prestations/">
@@ -80,11 +95,55 @@
                 <h2>Électronique</h2>
             </div>
             <ul class="prestation-list">
-                <li>Conception électronique</li>
-                <li>Réalisation de PCB</li>
-                <li>Programmation embarquée</li>
-                <li>Tests & instrumentation</li>
-                <li>Réalisation de documents techniques</li>
+                <li class="prestation-item" data-key="conception-electronique">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-electronique-conception">
+                        <span class="prestation-title">Conception électronique</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-electronique-conception" class="prestation-details" aria-hidden="true">
+                        <p>Conception de schémas, sélection de composants et simulations pour garantir la fiabilité et la fabricabilité.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="realisation-pcb">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-electronique-pcb">
+                        <span class="prestation-title">Réalisation de PCB</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-electronique-pcb" class="prestation-details" aria-hidden="true">
+                        <p>Conception et routage de PCB, préparation des fichiers de fabrication et accompagnement pour la production.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="programmation-embarquee">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-electronique-emb">
+                        <span class="prestation-title">Programmation embarquée</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-electronique-emb" class="prestation-details" aria-hidden="true">
+                        <p>Développement firmware pour microcontrôleurs, optimisation temps réel et gestion des périphériques.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="tests-instrumentation">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-electronique-tests">
+                        <span class="prestation-title">Tests & instrumentation</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-electronique-tests" class="prestation-details" aria-hidden="true">
+                        <p>Mise en place de bancs de tests, mesures, validation fonctionnelle et rapports d'essais.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="docs-techniques">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-electronique-docs">
+                        <span class="prestation-title">Réalisation de documents techniques</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-electronique-docs" class="prestation-details" aria-hidden="true">
+                        <p>Rédaction de dossiers techniques, notices, guides d'utilisation et documentations pour la fabrication.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -96,10 +155,45 @@
                 <h2>Robotique & systèmes embarqués</h2>
             </div>
             <ul class="prestation-list">
-                <li>Simulation de robots</li>
-                <li>Automatique appliquée</li>
-                <li>Interactions Homme-Machine</li>
-                <li>Drones & véhicules électriques</li>
+                <li class="prestation-item" data-key="simulation-robots">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-robotique-sim">
+                        <span class="prestation-title">Simulation de robots</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-robotique-sim" class="prestation-details" aria-hidden="true">
+                        <p>Modélisation et simulations (cinématique, dynamique, capteurs) pour valider les comportements avant prototype.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="automatique-appliquee">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-robotique-auto">
+                        <span class="prestation-title">Automatique appliquée</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-robotique-auto" class="prestation-details" aria-hidden="true">
+                        <p>Conception de régulateurs, contrôle-commande et optimisation des performances des systèmes automatisés.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="ihm">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-robotique-ihm">
+                        <span class="prestation-title">Interactions Homme-Machine</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-robotique-ihm" class="prestation-details" aria-hidden="true">
+                        <p>Conception d'interfaces et d'interactions ergonomiques pour faciliter l'utilisation et la supervision.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="drones-vehicules">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-robotique-drones">
+                        <span class="prestation-title">Drones & véhicules électriques</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-robotique-drones" class="prestation-details" aria-hidden="true">
+                        <p>Développement de prototypes, intégration électronique et stratégies de propulsion pour véhicules électriques et drones.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -111,11 +205,55 @@
                 <h2>Informatique</h2>
             </div>
             <ul class="prestation-list">
-                <li>Développement web</li>
-                <li>Développement mobile</li>
-                <li>Développement de jeu-vidéo</li>
-                <li>Programmation orientée objet</li>
-                <li>Modélisation 2D/3D</li>
+                <li class="prestation-item" data-key="dev-web">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-informatique-web">
+                        <span class="prestation-title">Développement web</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-informatique-web" class="prestation-details" aria-hidden="true">
+                        <p>Création d'applications web modernes, responsive et performantes, front-end et back-end.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="dev-mobile">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-informatique-mobile">
+                        <span class="prestation-title">Développement mobile</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-informatique-mobile" class="prestation-details" aria-hidden="true">
+                        <p>Applications mobiles natales et hybrides, optimisation UX et performance sur iOS/Android.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="dev-jeu">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-informatique-jeu">
+                        <span class="prestation-title">Développement de jeu-vidéo</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-informatique-jeu" class="prestation-details" aria-hidden="true">
+                        <p>Prototypage et développement de jeux 2D/3D, mécaniques de jeu et intégration graphique.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="poo">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-informatique-poo">
+                        <span class="prestation-title">Programmation orientée objet</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-informatique-poo" class="prestation-details" aria-hidden="true">
+                        <p>Conception de logiciels maintenables avec principes SOLID, architecture et patterns adaptés.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="modelisation">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-informatique-model">
+                        <span class="prestation-title">Modélisation 2D/3D</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-informatique-model" class="prestation-details" aria-hidden="true">
+                        <p>Modélisation et rendu 2D/3D pour visualisations, simulations et assets numériques.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -127,10 +265,45 @@
                 <h2>Data & IA</h2>
             </div>
             <ul class="prestation-list">
-                <li>Machine Learning</li>
-                <li>Data Processing</li>
-                <li>Deep Learning</li>
-                <li>Intelligent Automation</li>
+                <li class="prestation-item" data-key="ml">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-data-ml">
+                        <span class="prestation-title">Machine Learning</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-data-ml" class="prestation-details" aria-hidden="true">
+                        <p>Conception de modèles supervisés et non-supervisés pour extraction de valeur et prédiction.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="data-processing">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-data-processing">
+                        <span class="prestation-title">Data Processing</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-data-processing" class="prestation-details" aria-hidden="true">
+                        <p>Pipeline ETL, nettoyage, transformation et mise en forme des données pour analyses robustes.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="deep-learning">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-data-dl">
+                        <span class="prestation-title">Deep Learning</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-data-dl" class="prestation-details" aria-hidden="true">
+                        <p>Réseaux de neurones pour vision, NLP et autres tâches complexes, entraînement et déploiement.</p>
+                    </div>
+                </li>
+
+                <li class="prestation-item" data-key="intelligent-automation">
+                    <button class="prestation-toggle" aria-expanded="false" aria-controls="detail-data-automation">
+                        <span class="prestation-title">Intelligent Automation</span>
+                        <span class="chev" aria-hidden="true">›</span>
+                    </button>
+                    <div id="detail-data-automation" class="prestation-details" aria-hidden="true">
+                        <p>Automatisation intelligente des processus : RPA, pipelines ML et intégration aux systèmes existants.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -205,6 +378,51 @@
 
             mobileMenu && mobileMenu.addEventListener('click', (e)=>{
                 if(e.target === mobileMenu) closeMenu();
+            });
+        })();
+    </script>
+    <script>
+        (function(){
+            // Generic toggle behavior for all prestation items
+            const items = Array.from(document.querySelectorAll('.prestation-item'));
+            if(items.length === 0) return;
+
+            items.forEach(item => {
+                const btn = item.querySelector('.prestation-toggle');
+                const controlsId = btn.getAttribute('aria-controls');
+                const details = document.getElementById(controlsId);
+                if(!btn || !details) return;
+
+                const open = () => {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded','true');
+                    details.setAttribute('aria-hidden','false');
+                    details.style.maxHeight = details.scrollHeight + 'px';
+                };
+
+                const close = () => {
+                    item.classList.remove('open');
+                    btn.setAttribute('aria-expanded','false');
+                    details.setAttribute('aria-hidden','true');
+                    details.style.maxHeight = '0px';
+                };
+
+                btn.addEventListener('click', ()=>{
+                    if(item.classList.contains('open')) close(); else open();
+                });
+
+                // Allow keyboard activation (Enter/Space)
+                btn.addEventListener('keydown', (e) => {
+                    if(e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+
+                // initialize closed state
+                details.style.maxHeight = '0px';
+                details.setAttribute('aria-hidden','true');
+                btn.setAttribute('aria-expanded','false');
             });
         })();
     </script>
