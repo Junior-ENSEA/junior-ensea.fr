@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - Junior ENSEA</title>
+    <meta name="description" content="Contactez Junior ENSEA pour qualifier une mission d'étude, de prototype, de data, d'IA, de cybersécurité ou de logiciel.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body class="contact-page internal-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html" aria-label="Junior ENSEA - Accueil">
+          <img src="assets/images/junior-ensea-logo-color-trimmed.png" alt="Junior ENSEA">
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="prestations.html">Prestations</a>
+          <a href="specialites.html">Expertises</a>
+          <a href="equipe.html">La Junior</a>
+          <a class="nav-cta" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="page-hero" data-word="CONTACT">
+        <div class="container">
+          <p class="breadcrumb">Contact</p>
+          <h1>Nous contacter</h1>
+          <p>
+            Un premier message suffit pour lancer la qualification. Nous vous répondrons avec les premières
+            questions utiles pour cadrer le périmètre, les livrables et les compétences nécessaires.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-main-section">
+        <div class="container contact-layout">
+          <aside class="contact-panel">
+            <h2>Préparer votre demande</h2>
+            <p>Pour accélérer le premier échange, vous pouvez préciser :</p>
+            <ul>
+              <li>le contexte de l'organisation et du projet ;</li>
+              <li>le livrable attendu : diagnostic, prototype, outil, POC ou benchmark ;</li>
+              <li>les données, matériels ou documents déjà disponibles ;</li>
+              <li>les contraintes de délai, sécurité, confidentialité ou budget.</li>
+            </ul>
+            <h3>Champs d'intervention</h3>
+            <p>Electronique, embarqué, IoT, data, IA, signal, réseaux, cybersécurité, logiciel, énergie et innovation responsable.</p>
+          </aside>
+
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+            <input type="hidden" name="_subject" value="Demande de mission - Junior ENSEA">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Nom</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="company">Organisation</label>
+                <input id="company" name="company" autocomplete="organization">
+              </div>
+              <div class="form-field">
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-field full">
+                <label for="offer">Objectif ou expertise</label>
+                <select id="offer" name="offer">
+                  <optgroup label="Objectif du projet">
+                    <option>Cadrer une innovation</option>
+                    <option>Concevoir un système intelligent</option>
+                    <option>Optimiser un système existant</option>
+                  </optgroup>
+                  <optgroup label="Expertise déjà identifiée">
+                    <option>Electronique, embarqué et IoT</option>
+                    <option>Data, IA et traitement du signal</option>
+                    <option>Réseaux et cybersécurité</option>
+                    <option>Logiciel et automatisation</option>
+                    <option>Ingénierie, énergie et systèmes complexes</option>
+                    <option>Innovation, usages et écoconception</option>
+                  </optgroup>
+                  <option>Je ne sais pas encore</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="message">Votre besoin</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+            </div>
+            <button class="btn btn-dark" type="submit">Envoyer</button>
+            <p class="form-note">
+              Vos informations sont utilisées uniquement pour qualifier votre demande et vous recontacter.
+            </p>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section alt editorial-section" data-word="ÉTAPES">
+        <div class="container contact-followup">
+          <p class="eyebrow">Suite de votre demande</p>
+          <h2>Qualification, proposition, démarrage.</h2>
+          <div class="contact-steps">
+            <article><span>01</span><h3>Qualification</h3><p>Nous clarifions le besoin, le contexte et les livrables attendus.</p></article>
+            <article><span>02</span><h3>Proposition</h3><p>Nous précisons le périmètre, le planning, le budget et l'équipe.</p></article>
+            <article><span>03</span><h3>Démarrage</h3><p>La mission commence après validation des objectifs et des jalons.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <img class="footer-logo" src="assets/images/junior-ensea-logo-white.png" alt="Junior ENSEA">
+          <p>Junior ENSEA accompagne les organisations dans leurs projets techniques, de l'étude au prototype.</p>
+        </div>
+        <div>
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="prestations.html">Prestations</a></li>
+            <li><a href="equipe.html">La Junior</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Informations</h2>
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="prestations.html">Nos prestations</a></li>
+            <li><a href="plan-du-site.html">Plan du site</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© Junior ENSEA</span>
+          <span>Bureau d'études étudiant - Cergy-Pontoise</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/main.js?v=20260705-1"></script>
+  </body>
+</html>
