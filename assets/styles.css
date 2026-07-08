@@ -2612,11 +2612,8 @@ h4 {
 .about-team-heading {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  align-items: flex-end;
-  margin-bottom: 44px;
+  max-width: 760px;
+  margin-bottom: 38px;
 }
 
 .about-team-heading h2 {
@@ -2636,20 +2633,57 @@ h4 {
   color: var(--muted);
 }
 
+.team-stage {
+  --team-card-width: clamp(330px, 38vw, 520px);
+  --team-gap: clamp(24px, 4vw, 56px);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 8px 0 28px;
+}
+
+.team-stage::before,
+.team-stage::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: clamp(54px, 8vw, 120px);
+  content: "";
+  pointer-events: none;
+}
+
+.team-stage::before {
+  left: 0;
+  background: linear-gradient(to right, var(--white), rgba(255, 255, 255, 0));
+}
+
+.team-stage::after {
+  right: 0;
+  background: linear-gradient(to left, var(--white), rgba(255, 255, 255, 0));
+}
+
 .team-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
 }
 
 .team-controls button {
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--line);
+  width: clamp(46px, 5vw, 62px);
+  height: clamp(46px, 5vw, 62px);
+  border: 1px solid rgba(34, 55, 116, 0.18);
   color: var(--navy);
   background: var(--white);
-  font-size: 1.2rem;
+  box-shadow: 0 18px 44px rgba(18, 30, 66, 0.12);
+  font-size: 1.45rem;
   font-weight: 900;
   cursor: pointer;
+  pointer-events: auto;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
@@ -2661,32 +2695,37 @@ h4 {
 
 .team-slider {
   position: relative;
-  z-index: 1;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: clamp(245px, 22vw, 330px);
-  gap: 18px;
+  z-index: 3;
+  display: flex;
+  gap: var(--team-gap);
   overflow-x: auto;
-  padding: 0 0 18px;
+  margin: 0 calc(var(--team-card-width) * -0.26);
+  padding: 0 calc(50% - (var(--team-card-width) / 2)) 20px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(34, 55, 116, 0.32) transparent;
+  scrollbar-width: none;
+}
+
+.team-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .team-person-card {
-  min-height: 390px;
+  flex: 0 0 var(--team-card-width);
+  min-height: clamp(520px, 60vw, 660px);
   display: grid;
   grid-template-rows: 1fr auto auto;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   border: 1px solid var(--line);
   background: #f7f8fa;
+  box-shadow: 0 24px 70px rgba(18, 30, 66, 0.1);
 }
 
 .team-photo-placeholder,
 .team-photo {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  min-height: 0;
+  aspect-ratio: 4 / 4.7;
 }
 
 .team-photo-placeholder {
@@ -2697,7 +2736,7 @@ h4 {
     linear-gradient(135deg, rgba(43, 166, 197, 0.1), transparent 45%),
     #eef3f6;
   font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(4.6rem, 9vw, 8rem);
   font-weight: 900;
   letter-spacing: -0.04em;
 }
@@ -2708,7 +2747,7 @@ h4 {
 }
 
 .team-person-card p {
-  margin: 22px 24px 8px;
+  margin: clamp(24px, 3vw, 34px) clamp(26px, 3.2vw, 42px) 10px;
   color: var(--cyan);
   font-size: 0.72rem;
   font-weight: 900;
@@ -2717,11 +2756,11 @@ h4 {
 }
 
 .team-person-card h3 {
-  min-height: 72px;
-  margin: 0 24px 26px;
+  min-height: 86px;
+  margin: 0 clamp(26px, 3.2vw, 42px) clamp(28px, 3.5vw, 44px);
   color: var(--navy);
   font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  font-size: clamp(1.9rem, 3.3vw, 3.25rem);
   font-weight: 900;
   line-height: 1.02;
   text-transform: uppercase;
@@ -2747,6 +2786,10 @@ h4 {
 
   .about-team-heading {
     align-items: flex-start;
+  }
+
+  .team-stage {
+    --team-card-width: min(430px, 74vw);
   }
 }
 
@@ -2805,8 +2848,27 @@ h4 {
     display: grid;
   }
 
+  .team-stage {
+    --team-card-width: 78vw;
+    --team-gap: 18px;
+    padding-top: 0;
+  }
+
+  .team-stage::before,
+  .team-stage::after {
+    width: 34px;
+  }
+
   .team-slider {
-    grid-auto-columns: 78vw;
+    margin: 0;
+  }
+
+  .team-person-card {
+    min-height: 430px;
+  }
+
+  .team-person-card h3 {
+    min-height: 64px;
   }
 }
 
