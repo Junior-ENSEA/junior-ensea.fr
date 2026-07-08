@@ -2589,6 +2589,160 @@ h4 {
   gap: clamp(50px, 9vw, 120px);
 }
 
+.about-team {
+  position: relative;
+  padding: 96px 0 104px;
+  overflow: hidden;
+  background: #f3f2ef;
+}
+
+.about-team::before {
+  position: absolute;
+  top: 34px;
+  right: -34px;
+  color: rgba(34, 43, 61, 0.035);
+  content: "ÉQUIPE";
+  font-family: "Arial Narrow", Carlito, sans-serif;
+  font-size: clamp(5rem, 14vw, 13rem);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.about-team-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin-bottom: 48px;
+}
+
+.about-team-heading h2 {
+  max-width: 760px;
+  color: var(--ink);
+  font-family: "Arial Narrow", Carlito, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.9rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.about-team-heading > p:not(.eyebrow) {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.team-carousel {
+  --team-gap: 22px;
+  display: flex;
+  gap: var(--team-gap);
+  width: max-content;
+  padding: 0 var(--team-gap);
+  animation: team-scroll 55s linear infinite;
+  will-change: transform;
+}
+
+.team-carousel:hover {
+  animation-play-state: paused;
+}
+
+.team-track {
+  display: flex;
+  gap: var(--team-gap);
+}
+
+.team-card {
+  position: relative;
+  flex: 0 0 clamp(230px, 18vw, 295px);
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(34, 55, 116, 0.12);
+  background: var(--white);
+  box-shadow: 0 24px 60px rgba(18, 30, 66, 0.08);
+}
+
+.team-card::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(21, 29, 59, 0.12), transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.team-photo-placeholder,
+.team-photo {
+  position: absolute;
+  inset: 18px 18px 116px;
+}
+
+.team-photo-placeholder {
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.92);
+  background:
+    radial-gradient(circle at 22% 18%, rgba(120, 217, 232, 0.58), transparent 32%),
+    linear-gradient(135deg, var(--navy), var(--purple));
+  font-family: "Arial Narrow", Carlito, sans-serif;
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.team-photo {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  filter: saturate(0.94) contrast(1.03);
+}
+
+.team-card p,
+.team-card h3 {
+  position: relative;
+  z-index: 1;
+}
+
+.team-card p {
+  margin: 0 0 8px;
+  color: var(--cyan);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.team-card h3 {
+  max-width: 220px;
+  color: var(--navy);
+  font-family: "Arial Narrow", Carlito, sans-serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 900;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+@keyframes team-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - (var(--team-gap) / 2)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-carousel {
+    width: auto;
+    overflow-x: auto;
+    animation: none;
+  }
+}
+
 @media (max-width: 960px) {
   .about-story-grid,
   .about-organisation-grid {
@@ -2602,11 +2756,16 @@ h4 {
   .about-client-panel {
     min-height: 410px;
   }
+
+  .about-team {
+    padding: 78px 0 86px;
+  }
 }
 
 @media (max-width: 760px) {
   .about-story,
-  .about-organisation {
+  .about-organisation,
+  .about-team {
     padding: 68px 0;
   }
 
@@ -2652,6 +2811,15 @@ h4 {
   .about-page .about-cta .project-cta-inner {
     align-items: flex-start;
     gap: 24px;
+  }
+
+  .team-card {
+    flex-basis: 245px;
+    min-height: 355px;
+  }
+
+  .team-photo-placeholder {
+    inset: 16px 16px 108px;
   }
 }
 
