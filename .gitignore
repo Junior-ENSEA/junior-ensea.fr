@@ -3,3 +3,5 @@ output/
 *.log
 .DS_Store
 Thumbs.db
+assets/images/expertise-*.jpg
+assets/images/expertise-data-audit.png

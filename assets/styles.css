@@ -343,6 +343,204 @@
   }
 }
 
+/* Priorité finale des fiches d'expertise */
+.expertise-detail-page.internal-page main > .section {
+  padding: 44px 0 96px;
+  background: var(--white);
+}
+
+.expertise-detail-page.internal-page .accordion {
+  border: 0;
+}
+
+.expertise-detail-page.internal-page .accordion-header {
+  min-height: 0;
+  display: block;
+  padding: 0;
+}
+
+.expertise-detail-page.internal-page .accordion-body,
+.expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+  padding: 46px 42px;
+}
+
+@media (max-width: 760px) {
+  .expertise-detail-page.internal-page .accordion-body,
+  .expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+    padding: 34px 26px;
+  }
+}
+
+/* Fiches d'expertise — rythme de la page Prestations */
+.expertise-detail-page.internal-page main > .section {
+  padding: 44px 0 96px;
+  background: var(--white);
+}
+
+.expertise-detail-page.internal-page .detail-layout {
+  display: block;
+}
+
+.expertise-detail-page.internal-page .detail-main::before {
+  margin-bottom: 8px;
+  color: var(--cyan);
+  content: "Nos interventions";
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.expertise-detail-page.internal-page .accordion {
+  border: 0;
+  counter-reset: detail-offer;
+}
+
+.expertise-detail-page.internal-page .accordion-item,
+.expertise-detail-page.internal-page .accordion-item:first-child {
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+  gap: clamp(48px, 7vw, 100px);
+  align-items: center;
+  margin: 0;
+  padding: 76px 0;
+  counter-increment: detail-offer;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  box-shadow: none;
+}
+
+.expertise-detail-page.internal-page .accordion-header {
+  display: block;
+  padding: 0;
+  cursor: default;
+}
+
+.expertise-detail-page.internal-page .accordion-header::before {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--cyan);
+  content: "0" counter(detail-offer) " — EXPERTISE";
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.expertise-detail-page.internal-page .accordion-header h2 {
+  max-width: 650px;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.expertise-detail-page.internal-page .accordion-header p {
+  max-width: 620px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.expertise-detail-page.internal-page .accordion-chevron {
+  display: none;
+}
+
+.expertise-detail-page.internal-page .accordion-body,
+.expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+  max-height: none;
+  display: block;
+  overflow: visible;
+  opacity: 1;
+  padding: 46px 42px;
+  color: rgba(255, 255, 255, 0.78);
+  background: linear-gradient(145deg, #173552, #11182f);
+  box-shadow: 20px 20px 0 rgba(40, 170, 202, 0.09);
+}
+
+.expertise-detail-page.internal-page .accordion-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.expertise-detail-page.internal-page .accordion-body strong {
+  color: #80dceb;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.expertise-detail-page.internal-page .accordion-body li {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-header {
+  order: 2;
+}
+
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-body {
+  order: 1;
+  background: linear-gradient(145deg, #253775, #3f377f);
+  box-shadow: -20px 20px 0 rgba(84, 58, 145, 0.09);
+}
+
+.expertise-detail-page.internal-page .detail-aside {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 76px;
+}
+
+.expertise-detail-page.internal-page .sticky-panel,
+.expertise-detail-page.internal-page .sidebar-form {
+  margin: 0;
+}
+
+.expertise-detail-page.internal-page .sidebar-form {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 960px) {
+  .expertise-detail-page.internal-page .accordion-item,
+  .expertise-detail-page.internal-page .accordion-item:first-child {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-header,
+  .expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-body {
+    order: initial;
+  }
+}
+
+@media (max-width: 760px) {
+  .expertise-detail-page.internal-page .accordion-item,
+  .expertise-detail-page.internal-page .accordion-item:first-child {
+    min-height: 0;
+    padding: 58px 0;
+  }
+
+  .expertise-detail-page.internal-page .accordion-header h2 {
+    font-size: clamp(1.8rem, 10vw, 2.6rem);
+  }
+
+  .expertise-detail-page.internal-page .accordion-body,
+  .expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+    padding: 34px 26px;
+    box-shadow: 10px 10px 0 rgba(40, 170, 202, 0.09);
+  }
+
+  .expertise-detail-page.internal-page .accordion-columns,
+  .expertise-detail-page.internal-page .detail-aside {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Homepage — méthode allégée */
 .home-method-heading {
   max-width: 760px;
@@ -1278,8 +1476,8 @@ h4 {
 }
 
 .partner-item.partner-ensi img {
-  width: 88px;
-  max-height: 88px;
+  width: min(180px, 72%);
+  max-height: 132px;
 }
 
 .partner-item span {
@@ -4131,5 +4329,170 @@ h4 {
   .internal-page.wf-page main .page-hero::after {
     right: -18px;
     transform: translateX(8%);
+  }
+}
+
+/* Fiches d'expertise : corrections de cascade */
+.expertise-detail-page.internal-page main > .section {
+  padding: 44px 0 96px;
+  background: var(--white);
+}
+
+.expertise-detail-page.internal-page .accordion {
+  border: 0;
+}
+
+.expertise-detail-page.internal-page .accordion-header {
+  min-height: 0;
+  display: block;
+  padding: 0;
+}
+
+.expertise-detail-page.internal-page .accordion-body,
+.expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+  padding: 46px 42px;
+}
+
+@media (max-width: 760px) {
+  .expertise-detail-page.internal-page .accordion-body,
+  .expertise-detail-page.internal-page .accordion-item.is-open .accordion-body {
+    padding: 34px 26px;
+  }
+}
+
+/* Fiches d'expertise — texte à gauche, image à droite */
+.expertise-detail-page.internal-page .accordion-item,
+.expertise-detail-page.internal-page .accordion-item:first-child {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+  grid-template-rows: auto 1fr;
+  gap: 26px clamp(56px, 7vw, 110px);
+  align-items: center;
+}
+
+.expertise-detail-page.internal-page .accordion-item::after {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  aspect-ratio: 1;
+  padding: 42px;
+  border: 1px dashed rgba(34, 55, 116, 0.42);
+  color: var(--navy);
+  background:
+    linear-gradient(135deg, transparent 49.5%, rgba(40, 170, 202, 0.11) 50%, transparent 50.5%),
+    linear-gradient(45deg, transparent 49.5%, rgba(84, 58, 145, 0.09) 50%, transparent 50.5%),
+    #edf3f6;
+  content: "IMAGE À FOURNIR\A Visuel associé à cette expertise";
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  line-height: 1.7;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.expertise-detail-page.internal-page .accordion-item.has-image::after {
+  padding: 0;
+  border: 0;
+  background-image:
+    linear-gradient(135deg, rgba(18, 34, 58, 0.18), rgba(18, 34, 58, 0.02)),
+    var(--expertise-image);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 24px 24px 0 rgba(43, 166, 197, 0.1);
+  content: "";
+}
+
+.expertise-detail-page.internal-page .accordion-header,
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-header {
+  grid-column: 1;
+  grid-row: 1;
+  order: initial;
+  align-self: end;
+}
+
+.expertise-detail-page.internal-page .accordion-body,
+.expertise-detail-page.internal-page .accordion-item.is-open .accordion-body,
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-body {
+  grid-column: 1;
+  grid-row: 2;
+  order: initial;
+  align-self: start;
+  padding: 0;
+  color: var(--text);
+  background: transparent;
+  box-shadow: none;
+}
+
+.expertise-detail-page.internal-page .accordion-columns {
+  gap: 26px 42px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.expertise-detail-page.internal-page .accordion-body strong {
+  color: var(--navy);
+}
+
+.expertise-detail-page.internal-page .accordion-body li {
+  color: var(--muted);
+}
+
+.expertise-detail-page.internal-page .accordion-item:nth-child(even)::after {
+  grid-column: 1;
+}
+
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-header,
+.expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-body {
+  grid-column: 2;
+}
+
+.expertise-detail-page.internal-page .accordion-item.no-image::after {
+  display: none;
+}
+
+.expertise-detail-page.internal-page .accordion-item.no-image .accordion-header,
+.expertise-detail-page.internal-page .accordion-item.no-image .accordion-body,
+.expertise-detail-page.internal-page .accordion-item.no-image:nth-child(even) .accordion-header,
+.expertise-detail-page.internal-page .accordion-item.no-image:nth-child(even) .accordion-body {
+  grid-column: 1 / -1;
+  max-width: 980px;
+}
+
+@media (max-width: 960px) {
+  .expertise-detail-page.internal-page .accordion-item,
+  .expertise-detail-page.internal-page .accordion-item:first-child {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .expertise-detail-page.internal-page .accordion-item::after {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 520px;
+  }
+
+  .expertise-detail-page.internal-page .accordion-body,
+  .expertise-detail-page.internal-page .accordion-item.is-open .accordion-body,
+  .expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-body {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .expertise-detail-page.internal-page .accordion-item:nth-child(even) .accordion-header {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .expertise-detail-page.internal-page .accordion-item::after {
+    max-width: 100%;
+    padding: 28px;
+  }
+
+  .expertise-detail-page.internal-page .accordion-columns {
+    grid-template-columns: 1fr;
   }
 }

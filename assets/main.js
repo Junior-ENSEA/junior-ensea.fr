@@ -32,10 +32,9 @@ const buildSpecialtyDropdown = () => {
     ["Vue d'ensemble", `${prefix}specialites.html`],
     ["Electronique et systèmes embarqués", `${prefix}prestations/electronique-iot.html`],
     ["Data, IA et traitement du signal", `${prefix}prestations/data-ia-signal.html`],
-    ["Réseaux et cybersécurité", `${prefix}prestations/reseaux-cybersecurite.html`],
-    ["Logiciel et automatisation", `${prefix}prestations/logiciel-automatisation.html`],
+    ["Informatique et réseaux", `${prefix}prestations/reseaux-cybersecurite.html`],
     ["Automatique, énergie et instrumentation", `${prefix}prestations/ingenierie-energie.html`],
-    ["Innovation, usages et écoconception", `${prefix}prestations/innovation-responsable.html`]
+    ["Innovation, usage et faisabilité", `${prefix}prestations/innovation-responsable.html`]
   ];
 
   links.forEach(([label, url]) => {
@@ -88,6 +87,8 @@ if (navToggle && mainNav) {
 
 // Accordion toggle
 document.querySelectorAll(".accordion-header").forEach((header) => {
+  if (header.closest(".expertise-detail-page")) return;
+
   header.setAttribute("role", "button");
   header.setAttribute("tabindex", "0");
   header.setAttribute("aria-expanded", String(header.closest(".accordion-item")?.classList.contains("is-open")));
@@ -109,12 +110,6 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
     }
   });
 });
-
-const firstDetailAccordion = document.querySelector(".expertise-detail-page .accordion-item");
-if (firstDetailAccordion && !document.querySelector(".expertise-detail-page .accordion-item.is-open")) {
-  firstDetailAccordion.classList.add("is-open");
-  firstDetailAccordion.querySelector(".accordion-header")?.setAttribute("aria-expanded", "true");
-}
 
 const showFormspreePlaceholder = (form, event) => {
   const action = form.getAttribute("action") || "";
@@ -155,9 +150,22 @@ const addStructuredData = () => {
     "@type": "Organization",
     "@id": `${window.location.origin}/#organization`,
     name: "Junior ENSEA",
+    alternateName: "Bureau d'études associatif de l'ENSEA",
     url: window.location.origin,
     logo: logoUrl,
-    description: "Bureau d'études étudiant de l'ENSEA spécialisé en électronique, systèmes embarqués, data, IA, cybersécurité, logiciel et innovation responsable."
+    foundingDate: "1984",
+    slogan: "Des élèves-ingénieurs au service de vos projets techniques",
+    areaServed: "France",
+    description: "Association étudiante de conseil technique de l'ENSEA mobilisant des élèves-ingénieurs pour réaliser des études, prototypes et solutions numériques.",
+    knowsAbout: [
+      "Electronique",
+      "Systèmes embarqués",
+      "Traitement du signal",
+      "Data et intelligence artificielle",
+      "Développement web et mobile",
+      "Informatique et réseaux",
+      "Instrumentation et énergie"
+    ]
   };
 
   const graph = [
