@@ -2591,19 +2591,19 @@ h4 {
 
 .about-team {
   position: relative;
-  padding: 96px 0 108px;
+  padding: 92px 0 104px;
   overflow: hidden;
-  background: #f3f2ef;
+  background: var(--white);
 }
 
 .about-team::before {
   position: absolute;
-  top: 34px;
-  right: -34px;
-  color: rgba(34, 43, 61, 0.035);
-  content: "ÉQUIPE";
+  top: 28px;
+  right: clamp(-90px, -4vw, -28px);
+  color: rgba(34, 43, 61, 0.045);
+  content: "BUREAU";
   font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(5rem, 14vw, 13rem);
+  font-size: clamp(5rem, 15vw, 14rem);
   font-weight: 900;
   line-height: 1;
   pointer-events: none;
@@ -2612,15 +2612,18 @@ h4 {
 .about-team-heading {
   position: relative;
   z-index: 1;
-  max-width: 820px;
-  margin-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-end;
+  margin-bottom: 44px;
 }
 
 .about-team-heading h2 {
-  max-width: 760px;
+  max-width: 680px;
   color: var(--ink);
   font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(2.4rem, 5vw, 4.9rem);
+  font-size: clamp(2.4rem, 5.4vw, 5.4rem);
   font-weight: 900;
   line-height: 0.98;
   letter-spacing: -0.04em;
@@ -2633,46 +2636,79 @@ h4 {
   color: var(--muted);
 }
 
-.team-board {
+.team-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.team-controls button {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  background: var(--white);
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.team-controls button:hover {
+  transform: translateY(-2px);
+  color: var(--white);
+  background: var(--navy);
+}
+
+.team-slider {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
-  overflow: hidden;
-  background:
-    linear-gradient(145deg, rgba(43, 166, 197, 0.16), transparent 48%),
-    #151d3b;
-  box-shadow: 0 26px 70px rgba(18, 30, 66, 0.11);
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(245px, 22vw, 330px);
+  gap: 18px;
+  overflow-x: auto;
+  padding: 0 0 18px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 55, 116, 0.32) transparent;
 }
 
-.team-lead-card {
-  min-height: 430px;
+.team-person-card {
+  min-height: 390px;
   display: grid;
-  grid-template-rows: 1fr auto;
-  padding: clamp(28px, 4vw, 46px);
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  grid-template-rows: 1fr auto auto;
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  background: #f7f8fa;
 }
 
-.team-portrait-placeholder {
+.team-photo-placeholder,
+.team-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.team-photo-placeholder {
   display: grid;
-  min-height: 260px;
   place-items: center;
-  margin-bottom: 34px;
-  color: var(--white);
+  color: rgba(34, 55, 116, 0.42);
   background:
-    radial-gradient(circle at 22% 18%, rgba(120, 217, 232, 0.42), transparent 34%),
-    linear-gradient(145deg, rgba(84, 58, 145, 0.92), rgba(43, 166, 197, 0.62));
+    linear-gradient(135deg, rgba(43, 166, 197, 0.1), transparent 45%),
+    #eef3f6;
   font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 900;
   letter-spacing: -0.04em;
 }
 
-.team-lead-card p,
-.team-board-list span,
-.team-responsibles span {
-  display: block;
-  margin: 0 0 10px;
+.team-photo {
+  object-fit: cover;
+  filter: grayscale(0.12) contrast(1.04);
+}
+
+.team-person-card p {
+  margin: 22px 24px 8px;
   color: var(--cyan);
   font-size: 0.72rem;
   font-weight: 900;
@@ -2680,92 +2716,15 @@ h4 {
   text-transform: uppercase;
 }
 
-.team-lead-card h3,
-.team-board-list h3,
-.team-responsibles h3 {
-  color: var(--white);
+.team-person-card h3 {
+  min-height: 72px;
+  margin: 0 24px 26px;
+  color: var(--navy);
   font-family: "Arial Narrow", Carlito, sans-serif;
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
   font-weight: 900;
   line-height: 1.02;
   text-transform: uppercase;
-}
-
-.team-lead-card h3 {
-  font-size: clamp(2rem, 4vw, 3.8rem);
-}
-
-.team-board-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.team-board-list article {
-  min-height: 215px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: clamp(24px, 3vw, 38px);
-  border-right: 1px solid rgba(255, 255, 255, 0.11);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
-}
-
-.team-board-list .team-small-photo-placeholder {
-  width: 62px;
-  height: 62px;
-  margin-bottom: auto;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
-}
-
-.team-board-list h3 {
-  max-width: 360px;
-  font-size: clamp(1.35rem, 2.4vw, 2.35rem);
-}
-
-.team-responsibles {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin-top: 1px;
-  background: rgba(34, 55, 116, 0.14);
-}
-
-.team-responsibles article {
-  min-height: 255px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px;
-  background: var(--white);
-}
-
-.team-small-photo-placeholder {
-  display: grid;
-  width: 74px;
-  height: 74px;
-  place-items: center;
-  margin-bottom: auto;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--navy), var(--cyan));
-  font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: 1.7rem;
-  font-weight: 900;
-}
-
-.team-responsibles span {
-  color: var(--cyan);
-}
-
-.team-responsibles h3 {
-  color: var(--navy);
-  font-size: clamp(1.22rem, 1.8vw, 1.7rem);
-}
-
-.team-photo,
-.team-small-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 960px) {
@@ -2786,18 +2745,8 @@ h4 {
     padding: 78px 0 86px;
   }
 
-  .team-board {
-    grid-template-columns: 1fr;
-  }
-
-  .team-lead-card {
-    min-height: 0;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .team-responsibles {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .about-team-heading {
+    align-items: flex-start;
   }
 }
 
@@ -2852,18 +2801,12 @@ h4 {
     gap: 24px;
   }
 
-  .team-board-list,
-  .team-responsibles {
-    grid-template-columns: 1fr;
+  .about-team-heading {
+    display: grid;
   }
 
-  .team-board-list article,
-  .team-responsibles article {
-    min-height: 180px;
-  }
-
-  .team-portrait-placeholder {
-    min-height: 220px;
+  .team-slider {
+    grid-auto-columns: 78vw;
   }
 }
 
