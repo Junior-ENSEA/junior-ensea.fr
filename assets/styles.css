@@ -2589,183 +2589,6 @@ h4 {
   gap: clamp(50px, 9vw, 120px);
 }
 
-.about-team {
-  position: relative;
-  padding: 92px 0 104px;
-  overflow: hidden;
-  background: var(--white);
-}
-
-.about-team::before {
-  position: absolute;
-  top: 28px;
-  right: clamp(-90px, -4vw, -28px);
-  color: rgba(34, 43, 61, 0.045);
-  content: "BUREAU";
-  font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(5rem, 15vw, 14rem);
-  font-weight: 900;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.about-team-heading {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-  margin-bottom: 38px;
-}
-
-.about-team-heading h2 {
-  max-width: 680px;
-  color: var(--ink);
-  font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(2.4rem, 5.4vw, 5.4rem);
-  font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-}
-
-.about-team-heading > p:not(.eyebrow) {
-  max-width: 620px;
-  margin-top: 18px;
-  color: var(--muted);
-}
-
-.team-stage {
-  --team-card-width: clamp(330px, 38vw, 520px);
-  --team-gap: clamp(24px, 4vw, 56px);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  padding: 8px 0 28px;
-}
-
-.team-stage::before,
-.team-stage::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 2;
-  width: clamp(54px, 8vw, 120px);
-  content: "";
-  pointer-events: none;
-}
-
-.team-stage::before {
-  left: 0;
-  background: linear-gradient(to right, var(--white), rgba(255, 255, 255, 0));
-}
-
-.team-stage::after {
-  right: 0;
-  background: linear-gradient(to left, var(--white), rgba(255, 255, 255, 0));
-}
-
-.team-controls {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: none;
-}
-
-.team-controls button {
-  width: clamp(46px, 5vw, 62px);
-  height: clamp(46px, 5vw, 62px);
-  border: 1px solid rgba(34, 55, 116, 0.18);
-  color: var(--navy);
-  background: var(--white);
-  box-shadow: 0 18px 44px rgba(18, 30, 66, 0.12);
-  font-size: 1.45rem;
-  font-weight: 900;
-  cursor: pointer;
-  pointer-events: auto;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-}
-
-.team-controls button:hover {
-  transform: translateY(-2px);
-  color: var(--white);
-  background: var(--navy);
-}
-
-.team-slider {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  gap: var(--team-gap);
-  overflow-x: auto;
-  margin: 0 calc(var(--team-card-width) * -0.26);
-  padding: 0 calc(50% - (var(--team-card-width) / 2)) 20px;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.team-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.team-person-card {
-  flex: 0 0 var(--team-card-width);
-  min-height: clamp(520px, 60vw, 660px);
-  display: grid;
-  grid-template-rows: 1fr auto auto;
-  scroll-snap-align: center;
-  border: 1px solid var(--line);
-  background: #f7f8fa;
-  box-shadow: 0 24px 70px rgba(18, 30, 66, 0.1);
-}
-
-.team-photo-placeholder,
-.team-photo {
-  width: 100%;
-  min-height: 0;
-  aspect-ratio: 4 / 4.7;
-}
-
-.team-photo-placeholder {
-  display: grid;
-  place-items: center;
-  color: rgba(34, 55, 116, 0.42);
-  background:
-    linear-gradient(135deg, rgba(43, 166, 197, 0.1), transparent 45%),
-    #eef3f6;
-  font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(4.6rem, 9vw, 8rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-}
-
-.team-photo {
-  object-fit: cover;
-  filter: grayscale(0.12) contrast(1.04);
-}
-
-.team-person-card p {
-  margin: clamp(24px, 3vw, 34px) clamp(26px, 3.2vw, 42px) 10px;
-  color: var(--cyan);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.team-person-card h3 {
-  min-height: 86px;
-  margin: 0 clamp(26px, 3.2vw, 42px) clamp(28px, 3.5vw, 44px);
-  color: var(--navy);
-  font-family: "Arial Narrow", Carlito, sans-serif;
-  font-size: clamp(1.9rem, 3.3vw, 3.25rem);
-  font-weight: 900;
-  line-height: 1.02;
-  text-transform: uppercase;
-}
-
 @media (max-width: 960px) {
   .about-story-grid,
   .about-organisation-grid {
@@ -2780,23 +2603,11 @@ h4 {
     min-height: 410px;
   }
 
-  .about-team {
-    padding: 78px 0 86px;
-  }
-
-  .about-team-heading {
-    align-items: flex-start;
-  }
-
-  .team-stage {
-    --team-card-width: min(430px, 74vw);
-  }
 }
 
 @media (max-width: 760px) {
   .about-story,
-  .about-organisation,
-  .about-team {
+  .about-organisation {
     padding: 68px 0;
   }
 
@@ -2844,32 +2655,6 @@ h4 {
     gap: 24px;
   }
 
-  .about-team-heading {
-    display: grid;
-  }
-
-  .team-stage {
-    --team-card-width: 78vw;
-    --team-gap: 18px;
-    padding-top: 0;
-  }
-
-  .team-stage::before,
-  .team-stage::after {
-    width: 34px;
-  }
-
-  .team-slider {
-    margin: 0;
-  }
-
-  .team-person-card {
-    min-height: 430px;
-  }
-
-  .team-person-card h3 {
-    min-height: 64px;
-  }
 }
 
 /* --- Prestations: alternating ERRM-inspired composition --- */

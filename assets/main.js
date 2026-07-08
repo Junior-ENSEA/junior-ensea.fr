@@ -138,22 +138,6 @@ document.querySelectorAll("form[data-formspree]").forEach((form) => {
   });
 });
 
-document.querySelectorAll("[data-team-slider]").forEach((slider) => {
-  const section = slider.closest(".about-team");
-  const previous = section?.querySelector("[data-team-prev]");
-  const next = section?.querySelector("[data-team-next]");
-
-  const scrollTeam = (direction) => {
-    const card = slider.querySelector(".team-person-card");
-    const gap = Number.parseFloat(getComputedStyle(slider).columnGap || "0");
-    const amount = (card?.getBoundingClientRect().width || slider.clientWidth * 0.8) + gap;
-    slider.scrollBy({ left: direction * amount, behavior: "smooth" });
-  };
-
-  previous?.addEventListener("click", () => scrollTeam(-1));
-  next?.addEventListener("click", () => scrollTeam(1));
-});
-
 const addStructuredData = () => {
   const title = document.title;
   const description = document.querySelector('meta[name="description"]')?.content || "";
