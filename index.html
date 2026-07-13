@@ -3,28 +3,85 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
     <title>Association étudiante de conseil technique | Junior ENSEA</title>
     <meta name="description" content="Junior ENSEA est l'association étudiante de conseil technique de l'ENSEA. Des élèves-ingénieurs réalisent vos études en électronique et numérique.">
     <link rel="canonical" href="https://junior-ensea.fr/">
-    <link rel="stylesheet" href="assets/styles.css?v=20260705-19">
+    <meta name="theme-color" content="#253876">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Junior ENSEA">
+    <meta property="og:title" content="Association étudiante de conseil technique | Junior ENSEA">
+    <meta property="og:description" content="Junior ENSEA est l'association étudiante de conseil technique de l'ENSEA. Des élèves-ingénieurs réalisent vos études en électronique et numérique.">
+    <meta property="og:url" content="https://junior-ensea.fr/">
+    <meta property="og:image" content="https://junior-ensea.fr/assets/images/ensea-campus.webp">
+    <meta property="og:image:alt" content="Campus de l'ENSEA à Cergy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Association étudiante de conseil technique | Junior ENSEA">
+    <meta name="twitter:description" content="Junior ENSEA est l'association étudiante de conseil technique de l'ENSEA. Des élèves-ingénieurs réalisent vos études en électronique et numérique.">
+    <meta name="twitter:image" content="https://junior-ensea.fr/assets/images/ensea-campus.webp">
+    <script type="application/ld+json" data-entity-schema>
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://junior-ensea.fr/#organization",
+            "name": "Junior ENSEA",
+            "legalName": "JUNIOR ENSEA (JE)",
+            "alternateName": "Bureau d'études associatif de l'ENSEA",
+            "url": "https://junior-ensea.fr/",
+            "logo": "https://junior-ensea.fr/assets/images/junior-ensea-logo-color-trimmed.png",
+            "email": "contact@juniorensea.fr",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "SIREN",
+              "value": "422374462"
+            },
+            "vatID": "FR79422374462",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "6 avenue du Ponceau",
+              "postalCode": "95000",
+              "addressLocality": "Cergy",
+              "addressCountry": "FR"
+            },
+            "sameAs": [
+              "https://annuaire-entreprises.data.gouv.fr/entreprise/junior-ensea-je-422374462"
+            ],
+            "slogan": "Des élèves-ingénieurs au service de vos projets techniques",
+            "areaServed": "France",
+            "description": "Association étudiante de conseil technique de l'ENSEA mobilisant des élèves-ingénieurs pour réaliser des études, prototypes et solutions numériques."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://junior-ensea.fr/#website",
+            "name": "Junior ENSEA",
+            "url": "https://junior-ensea.fr/",
+            "publisher": { "@id": "https://junior-ensea.fr/#organization" },
+            "inLanguage": "fr-FR"
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/styles.css?v=20260713-17">
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
       <div class="nav-wrap">
-        <a class="brand" href="index.html" aria-label="Junior ENSEA - Accueil">
-          <img src="assets/images/junior-ensea-logo-color-trimmed.png" alt="Junior ENSEA">
+        <a class="brand" href="/" aria-label="Junior ENSEA - Accueil">
+          <img src="/assets/images/junior-ensea-logo-color-trimmed.png" alt="Junior ENSEA">
         </a>
         <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
           <span></span>
         </button>
         <nav class="main-nav" aria-label="Navigation principale">
-          <a href="index.html" aria-current="page">Accueil</a>
-          <a href="prestations.html">Prestations</a>
-          <a href="specialites.html">Expertises</a>
-          <a href="equipe.html">La Junior</a>
-          <a class="nav-cta" href="contact.html">Contact</a>
+          <a href="/" aria-current="page">Accueil</a>
+          <a href="/prestations/">Prestations</a>
+          <a href="/specialites/">Expertises</a>
+          <a href="/equipe/">La Junior</a>
+          <a class="nav-cta" href="/contact/">Demandez un devis</a>
         </nav>
       </div>
     </header>
@@ -37,8 +94,8 @@
           <p class="home-hero-title">Des élèves-ingénieurs mobilisés sur vos enjeux électroniques et numériques.</p>
           <p class="hero-lead">Un bureau d'études associatif pour cadrer, réaliser et restituer vos missions techniques.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="specialites.html">Découvrir nos expertises</a>
-            <a class="btn btn-secondary" href="contact.html">Demander un échange</a>
+            <a class="btn btn-primary" href="/specialites/">Découvrir nos expertises</a>
+            <a class="btn btn-secondary" href="/contact/">Demander un échange</a>
           </div>
           <div id="chiffres" class="hero-stats" aria-label="Junior ENSEA en chiffres">
             <article class="hero-stat">
@@ -72,17 +129,17 @@
           </div>
           <div class="core-specialties">
             <article class="core-specialty">
-              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#electronics"></use></svg></span>
-              <h3>Electronique et systèmes embarqués</h3>
+              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#electronics"></use></svg></span>
+              <h3>Électronique et systèmes embarqués</h3>
               <p>Cartes électroniques, microcontrôleurs, capteurs, firmware, objets connectés et protocoles de test.</p>
             </article>
             <article class="core-specialty">
-              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#data"></use></svg></span>
+              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#data"></use></svg></span>
               <h3>Signal, data et intelligence artificielle</h3>
               <p>Traitement du signal et de l'image, séries temporelles, modèles prédictifs, visualisation et IA embarquée.</p>
             </article>
             <article class="core-specialty">
-              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#network"></use></svg></span>
+              <span class="feature-icon-box"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#network"></use></svg></span>
               <h3>Informatique et réseaux</h3>
               <p>Développement web et mobile, logiciels, API, architecture réseau, transmission, protocoles et objets connectés.</p>
             </article>
@@ -104,21 +161,21 @@
             <article class="home-offer">
               <h3>Cadrer une innovation</h3>
               <p>Évaluer une idée, réduire les incertitudes et formaliser le besoin avant d'investir dans sa réalisation.</p>
-              <a class="home-offer-link" href="prestations.html#cadrer">Découvrir</a>
+              <a class="home-offer-link" href="/prestations/#cadrer">Découvrir</a>
             </article>
             <article class="home-offer">
               <h3>Concevoir un système intelligent</h3>
               <p>Transformer un besoin défini en preuve de concept, prototype ou outil fonctionnel et documenté.</p>
-              <a class="home-offer-link" href="prestations.html#concevoir">Découvrir</a>
+              <a class="home-offer-link" href="/prestations/#concevoir">Découvrir</a>
             </article>
             <article class="home-offer">
               <h3>Optimiser un système existant</h3>
               <p>Diagnostiquer un produit, un processus ou un système numérique et proposer des améliorations mesurables.</p>
-              <a class="home-offer-link" href="prestations.html#optimiser">Découvrir</a>
+              <a class="home-offer-link" href="/prestations/#optimiser">Découvrir</a>
             </article>
           </div>
           <div class="section-actions" style="margin-top: 28px;">
-            <a class="btn btn-dark" href="prestations.html">Voir toutes les prestations</a>
+            <a class="btn btn-dark" href="/prestations/">Voir toutes les prestations</a>
           </div>
         </div>
       </section>
@@ -131,31 +188,31 @@
           </div>
           <div class="home-method-track">
             <article class="home-method-step">
-              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#innovation"></use></svg></span>
+              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#innovation"></use></svg></span>
               <small>01</small>
               <h3>Votre idée</h3>
               <p>Écoute et définition du besoin. Nous précisons vos objectifs et vos contraintes. Un premier échange permet de valider la faisabilité.</p>
             </article>
             <article class="home-method-step">
-              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#brief"></use></svg></span>
+              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#brief"></use></svg></span>
               <small>02</small>
               <h3>Proposition commerciale</h3>
               <p>Périmètre, budget et délais. La méthode et les livrables sont formalisés. Vous validez la proposition avant le lancement.</p>
             </article>
             <article class="home-method-step">
-              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#team"></use></svg></span>
+              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#team"></use></svg></span>
               <small>03</small>
               <h3>Recrutement</h3>
               <p>Les compétences adaptées. Nous évaluons les profils techniques disponibles. Les consultants les plus pertinents rejoignent l'étude.</p>
             </article>
             <article class="home-method-step">
-              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#tracking"></use></svg></span>
+              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#tracking"></use></svg></span>
               <small>04</small>
               <h3>Suivi de l'étude</h3>
               <p>Points réguliers et validations. Votre interlocuteur suit l'avancement de l'étude. Les ajustements sont partagés en toute transparence.</p>
             </article>
             <article class="home-method-step">
-              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#delivery"></use></svg></span>
+              <span class="home-method-marker"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#delivery"></use></svg></span>
               <small>05</small>
               <h3>Remise des livrables</h3>
               <p>Contrôle qualité et transmission. Les résultats vous sont présentés clairement. Nous restons disponibles pour leur prise en main.</p>
@@ -175,24 +232,43 @@
           </div>
           <div class="value-grid">
             <div class="value-point">
-              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#scope"></use></svg></span>
+              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#scope"></use></svg></span>
               <h3>Compétences ciblées</h3>
               <p>Les intervenants sont sélectionnés selon les besoins techniques de la mission.</p>
             </div>
             <div class="value-point">
-              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#tracking"></use></svg></span>
+              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#tracking"></use></svg></span>
               <h3>Suivi régulier</h3>
               <p>Des points d'étape permettent de partager les résultats et d'arbitrer les choix.</p>
             </div>
             <div class="value-point">
-              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="assets/icons.svg#delivery"></use></svg></span>
+              <span class="feature-icon-box feature-icon-box-dark"><svg class="feature-icon" aria-hidden="true"><use href="/assets/icons.svg#delivery"></use></svg></span>
               <h3>Livrables définis</h3>
               <p>Le périmètre, la méthode et les livrables sont précisés avant le démarrage.</p>
             </div>
           </div>
           <div class="section-actions junior-actions">
-            <a class="btn btn-secondary" href="equipe.html">Découvrir la Junior</a>
+            <a class="btn btn-secondary" href="/equipe/">Découvrir la Junior</a>
           </div>
+        </div>
+      </section>
+
+      <section class="section testimonial-section editorial-section" data-word="CONFIANCE" aria-labelledby="testimonial-title">
+        <div class="container testimonial-layout">
+          <div class="testimonial-copy">
+            <p class="eyebrow">Retour client</p>
+            <h2 id="testimonial-title">Une mission utile se mesure au livrable remis.</h2>
+            <p>Comprendre le besoin, s'adapter pendant l'étude et livrer un résultat exploitable : c'est le niveau d'exigence que nous visons sur chaque mission.</p>
+          </div>
+          <figure class="client-testimonial">
+            <blockquote>
+              Je recommanderai Junior ENSEA à mon entourage car ils ont bien compris ce qui était demandé. Ils ont réussi à trouver des solutions quand il fallait. Le livrable correspond très bien à mon besoin.
+            </blockquote>
+            <figcaption>
+              <strong>Sandie Leconte</strong>
+              <span>Ingénieure de recherche chez Philharmonie de Paris</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -204,10 +280,10 @@
           </div>
           <div class="partners-list" aria-label="Partenaires de Junior ENSEA">
             <a class="partner-item" href="https://group.bnpparibas/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/images/partner-bnp-paribas.svg" alt="BNP Paribas">
+              <img src="/assets/images/partner-bnp-paribas.svg" alt="BNP Paribas">
             </a>
             <div class="partner-item partner-ensi" aria-label="ENSI Junior Entreprise">
-              <img src="assets/images/partner-ensi.png" alt="ENSI Junior Entreprise">
+              <img src="/assets/images/partner-ensi.png" alt="ENSI Junior Entreprise">
             </div>
           </div>
         </div>
@@ -222,9 +298,9 @@
               Décrivez votre besoin, même s'il n'est pas encore parfaitement cadré. Nous reviendrons vers vous
               pour qualifier le périmètre et identifier la meilleure offre.
             </p>
-            <p><a href="prestations.html">Comparer les prestations</a></p>
+            <p><a href="/prestations/">Comparer les prestations</a></p>
           </div>
-          <form class="card contact-form home-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-formspree>
+          <form class="card contact-form home-contact-form" action="https://formspree.io/f/xlgqeopk" method="POST" data-formspree>
             <input type="hidden" name="_subject" value="Nouveau contact depuis le site Junior ENSEA">
             <div class="form-grid">
               <div class="form-field">
@@ -254,7 +330,7 @@
               </div>
             </div>
             <button class="btn btn-dark" type="submit">Envoyer la demande</button>
-            <p class="form-note">Vos informations sont utilisées uniquement pour qualifier votre demande et vous recontacter.</p>
+            <p class="form-note">Vos informations sont utilisées uniquement pour qualifier votre demande et vous recontacter. <a href="/mentions-legales/#donnees-personnelles">En savoir plus sur leur traitement.</a></p>
             <p class="form-status" aria-live="polite"></p>
           </form>
         </div>
@@ -266,43 +342,53 @@
             <p class="eyebrow">Une idée, un besoin, une problématique ?</p>
             <h2>Votre projet commence ici.</h2>
           </div>
-          <a class="btn btn-light" href="contact.html">Nous contacter</a>
+          <a class="btn btn-light" href="/contact/">Nous contacter</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-inner">
-        <div>
-          <img class="footer-logo" src="assets/images/junior-ensea-logo-white.png" alt="Junior ENSEA">
-          <p>Junior ENSEA accompagne les organisations dans leurs projets techniques, de l'étude au prototype.</p>
-        </div>
-        <div>
-          <h2>Navigation</h2>
-          <ul>
-            <li><a href="specialites.html">Expertises</a></li>
-            <li><a href="prestations.html">Prestations</a></li>
-            <li><a href="equipe.html">La Junior</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Informations</h2>
-          <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="contact.html">Demander un devis</a></li>
-            <li><a href="plan-du-site.html">Plan du site</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <span>© Junior ENSEA</span>
-          <span>Bureau d'études étudiant - Cergy-Pontoise</span>
-        </div>
-      </div>
-    </footer>
+  <div class="footer-inner">
+    <div class="footer-brand-block">
+      <img class="footer-logo" src="/assets/images/junior-ensea-logo-white.png" alt="Junior ENSEA">
+      <p>Junior ENSEA accompagne les organisations dans leurs projets techniques, de l'étude au prototype.</p>
+    </div>
+    <div>
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/prestations/">Prestations</a></li>
+        <li><a href="/specialites/">Expertises</a></li>
+        <li><a href="/equipe/">La Junior</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Expertises</h2>
+      <ul>
+        <li><a href="/prestations/electronique-iot/">Électronique et embarqué</a></li>
+        <li><a href="/prestations/data-ia-signal/">Data, IA et signal</a></li>
+        <li><a href="/prestations/reseaux-cybersecurite/">Informatique et réseaux</a></li>
+        <li><a href="/prestations/innovation-responsable/">Innovation et faisabilité</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contacts directs</h2>
+      <ul class="footer-contact-list">
+        <li>6 avenue du Ponceau<br>95000 Cergy</li>
+        <li><a href="mailto:contact@juniorensea.fr">contact@juniorensea.fr</a></li>
+        <li><a href="/contact/">Demander un devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© Junior ENSEA</span>
+      <span class="footer-legal-links"><a href="/mentions-legales/">Mentions légales</a><a href="#cookies" data-open-cookie-panel>Gestion des cookies</a></span>
+    </div>
+  </div>
+</footer>
 
-    <script src="assets/main.js?v=20260705-4"></script>
+    <script src="/assets/main.js?v=20260713-9"></script>
   </body>
 </html>
