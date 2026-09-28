@@ -357,7 +357,7 @@ const buildCookieConsent = () => {
 buildCookieConsent();
 
 const addStructuredData = () => {
-  const productionOrigin = "https://junior-ensea.fr";
+  const productionOrigin = "https://juniorensea.fr";
   const title = document.title;
   const description = document.querySelector('meta[name="description"]')?.content || "";
   const canonicalUrl =
